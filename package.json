@@ -1,0 +1,22 @@
+{
+  "name": "clocoss_node",
+  "version": "1.0.0",
+  "description": "A basic node introduction",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/up730418/clocoss_node.git"
+  },
+  "author": "up730418",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/up730418/clocoss_node/issues"
+  },
+  "homepage": "https://github.com/up730418/clocoss_node#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
