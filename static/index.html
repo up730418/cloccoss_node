@@ -1,2 +1,48 @@
 <h1>Hello World</h1>
 
+<h3>What is node</h3>
+
+<p id="whatisnode"></p>
+
+<h3>express</h3>
+
+<p id="express"></p>
+
+<h3>so why use it</h3>
+
+<p id="sowhyuseit"></p>
+
+<h3>API End Point</h3>
+
+<p id="apiendpoint"></p>
+
+<h3>JS Sugar</h3>
+
+<p id="jssugar"></p>
+
+
+<script>
+  const fetchOptions = {
+    credentials: 'same-origin',
+    method: 'GET',  
+  };
+
+  function getdata(url, place) {
+    fetch(url, fetchOptions)
+      .then(res => res.text())
+	.then((res) => {
+         document.getElementById(place).innerHTML= res;
+	console.log(res);
+
+      	
+      })
+
+  }
+
+
+  getdata('/whatisnode', 'whatisnode');
+  getdata('/express', 'express');
+  getdata('/sowhyuseit', 'sowhyuseit');
+  getdata('/api/', 'apiendpoint');
+  getdata('/api/js/find', 'jssugar');
+</script>
