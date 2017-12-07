@@ -22,17 +22,17 @@
 
 
 <script>
-  const fetchOptions = {
-    credentials: 'same-origin',
-    method: 'GET',  
-  };
 
-  function getdata(url, place) {
+  function getdata(url, place, method) {
+    const fetchOptions = {
+      credentials: 'same-origin',
+    method: method || 'GET',  
+  }  ;
+
     fetch(url, fetchOptions)
-      .then(res => res.text())
+  	.then(res => res.text())
 	.then((res) => {
          document.getElementById(place).innerHTML= res;
-	console.log(res);
 
       	
       })
@@ -45,4 +45,8 @@
   getdata('/sowhyuseit', 'sowhyuseit');
   getdata('/api/', 'apiendpoint');
   getdata('/api/js/find', 'jssugar');
+
+  function apithing(type){
+	getdata('/api/','apiendpoint',type);
+  }
 </script>
